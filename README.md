@@ -1,2 +1,4 @@
-# Repository ini dibuat dalam rangka pengerjaan tugas Python kloter 2 NetDev 2023
-
+# Python kloter 2 NetDev 2023
+  Repository yang dibuat sebagai media penyimpanan file Python kloter 2 NetDev 2023
+# Deskripsi Program
+  Script ini menjalankan program pemesanan kopi melalui Coffee Machine menggunakan bahasa Python
