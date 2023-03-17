@@ -1,4 +1,5 @@
 
+#function
 def resource_full(masukan):
     for item in masukan:
         if masukan[item] >= resource[item]:
