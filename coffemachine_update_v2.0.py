@@ -49,8 +49,11 @@ def resource_full(masukan):
 
 
 def input_uang():
-    total_uang = int(input("Masukan uang: Rp."))
-    return total_uang
+    try:
+        total_uang = int(input("Masukan uang: Rp."))
+        return total_uang
+    except ValueError:
+        raise Exception("Input uang tidak valid.")
 
 
 def transaksi_berhasil(masukan_uang, harga_minuman):
