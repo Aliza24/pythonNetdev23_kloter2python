@@ -64,6 +64,13 @@ def kurangin_resource(nama_kopi, bahan):
     print(f"Silakan nikmati {nama_kopi}")
 
 
+    
+    
+import os
+
+def clear_screen():
+    os.system('clear')
+   
 on = True
 while on: 
     pilihan = input("Mau pesan kopi apa (Kopi Aren/Americano/Latte): ")
@@ -84,4 +91,3 @@ while on:
             kurangin_resource(pilihan, pilihan_kopi["bahan"])
             uang += pilihan_kopi["harga"]
             
-system("cls")
