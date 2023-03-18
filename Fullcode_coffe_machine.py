@@ -16,7 +16,7 @@ isi = {
         "harga": 10000.0,
     },
     
-    "latte": { 
+    "Latte": { 
         "bahan": {
             "kopi": 30,
             "susu": 20,
