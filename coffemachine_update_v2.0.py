@@ -1,5 +1,7 @@
+import os
+
 isi = {
-    "Kopi_aren": { 
+    "Kopi Gula Aren": { 
         "bahan": {
             "kopi": 30,
             "gula_merah": 20,
@@ -18,7 +20,7 @@ isi = {
     
     "Latte": { 
         "bahan": {
-            "kopi": 30,
+            "kopi": 150,
             "susu": 20,
             "air": 80,
         },
@@ -35,10 +37,13 @@ resource = {
     "gula_merah": 100
 }
 
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 def resource_full(masukan):
     for item in masukan:
         if masukan[item] >= resource[item]:
-            print(f"Maaf bahan tidak cukup untuk membuat pesanan Anda {item}")
+            print(f"\nMaaf, bahan tidak cukup untuk membuat pesanan {item} Anda ")
             return True
     return False
 
@@ -55,6 +60,7 @@ def transaksi_berhasil(masukan_uang, harga_minuman):
         return True
     else:
         print("Maaf uang Anda tidak cukup")
+        input("Tekan enter untuk melanjutkan...")
         return False
 
 
@@ -64,16 +70,29 @@ def kurangin_resource(nama_kopi, bahan):
     print(f"Silakan nikmati {nama_kopi}")
 
 
-    
-    
-import os
+def home_screen():
+    clear_screen()
+    print("Selamat datang di Coffee Shop PythonKloter2")
+    print("\nMenu kopi:")
+    print("1. Kopi Aren")
+    print("2. Americano")
+    print("3. Latte")
+    print("\nUntuk keluar, ketik 'off'")
+    print("Untuk melihat laporan bahan dan uang, ketik 'report'")
+    print("============================================")
+    input("\nTekan enter untuk melanjutkan...")
+  
 
-def clear_screen():
-    os.system('clear')
-   
 on = True
 while on: 
-    pilihan = input("Mau pesan kopi apa (Kopi Aren/Americano/Latte): ")
+    home_screen()
+    clear_screen
+    print("\nMau pesan kopi apa?")
+    print("\nPilih:")
+    print("1. Kopi Gula Aren")
+    print("2. Americano")
+    print("3. Latte")
+    pilihan = input("(Kopi Gula Aren / Americano / Latte): ")
     if pilihan == "off":
         on = False
     elif pilihan == "report":
@@ -82,12 +101,16 @@ while on:
         print(f"Susu\t\t: {resource['susu']}ml")
         print(f"Gula Merah\t: {resource['gula_merah']}ml")
         print(f"Uang\t\t: {uang}")
+        input("\nTekan enter untuk melanjutkan...")
     else:
         pilihan_kopi = isi[pilihan]
         if resource_full(pilihan_kopi["bahan"]):
+            input("\nTekan enter untuk melanjutkan...")
             continue
         bayar = input_uang()
         if transaksi_berhasil(bayar, pilihan_kopi["harga"]):
             kurangin_resource(pilihan, pilihan_kopi["bahan"])
             uang += pilihan_kopi["harga"]
+            input("\nTekan enter untuk melanjutkan...")
+
             
