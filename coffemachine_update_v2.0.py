@@ -67,7 +67,7 @@ def transaksi_berhasil(masukan_uang, harga_minuman):
 def kurangin_resource(nama_kopi, bahan):
     for item in bahan:
         resource[item] -= bahan[item]
-    print(f"Silakan nikmati {nama_kopi}")
+    print(f"Selamat menikmati {nama_kopi} Anda!")
 
 
 def home_screen():
