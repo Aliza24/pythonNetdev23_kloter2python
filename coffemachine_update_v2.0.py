@@ -74,9 +74,9 @@ def home_screen():
     clear_screen()
     print("Selamat datang di Coffee Shop PythonKloter2")
     print("\nMenu kopi:")
-    print("1. Kopi Aren")
-    print("2. Americano")
-    print("3. Latte")
+    print("1. Kopi Gula Aren\t:Rp20000")
+    print("2. Americano\t\t:Rp10000")
+    print("3. Latte\t\t:Rp15000")
     print("\nUntuk keluar, ketik 'off'")
     print("Untuk melihat laporan bahan dan uang, ketik 'report'")
     print("============================================")
@@ -86,10 +86,10 @@ def home_screen():
 on = True
 while on: 
     home_screen()
-    clear_screen
+    clear_screen()
     print("\nMau pesan kopi apa?")
-    print("\nPilih:")
-    print("1. Kopi Gula Aren")
+    print("\nSilakan Pilih:")
+    print("\n1. Kopi Gula Aren")
     print("2. Americano")
     print("3. Latte")
     pilihan = input("(Kopi Gula Aren / Americano / Latte): ")
