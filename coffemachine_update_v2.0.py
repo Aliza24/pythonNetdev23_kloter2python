@@ -108,7 +108,7 @@ while on:
         print(f"Gula Merah\t: {resource['gula_merah']}ml")
         print(f"Uang\t\t: {uang}")
         input("\nTekan enter untuk melanjutkan...")
-    else:
+   elif pilihan in ["Kopi Gula Aren", "Americano", "Latte"]:
         pilihan_kopi = isi[pilihan]
         if resource_full(pilihan_kopi["bahan"]):
             input("\nTekan enter untuk melanjutkan...")
@@ -118,3 +118,6 @@ while on:
             kurangin_resource(pilihan, pilihan_kopi["bahan"])
             uang += pilihan_kopi["harga"]
             input("\nTekan enter untuk melanjutkan...")
+    else:
+        print("Pilihan tidak valid. Silakan coba lagi.")
+        input("\nTekan enter untuk melanjutkan...")
