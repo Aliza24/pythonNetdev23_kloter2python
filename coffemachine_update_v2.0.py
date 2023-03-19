@@ -53,7 +53,7 @@ def input_uang():
         total_uang = int(input("Masukan uang: Rp."))
         return total_uang
     except ValueError:
-        raise Exception("Input uang tidak valid.")
+        raise Exception("Input uang tidak valid!.")
 
 
 def transaksi_berhasil(masukan_uang, harga_minuman):
@@ -75,7 +75,10 @@ def kurangin_resource(nama_kopi, bahan):
 
 def home_screen():
     clear_screen()
-    print("Selamat datang di Coffee Shop PythonKloter2")
+    print("============== MESIN KOPI NETDEV2 ==============")
+    print("-- Selamat datang di Coffee Shop PythonKloter2 --")
+    print("---------- Tolong Input Pesanan Anda ----------")
+    print("               Welcome & Enjoy                 ")
     print("\nMenu kopi:")
     print("1. Kopi Gula Aren\t:Rp20000")
     print("2. Americano\t\t:Rp10000")
@@ -92,7 +95,7 @@ while on:
     clear_screen()
     print("\nMau pesan kopi apa?")
     print("\nSilakan Pilih:")
-    print("\n1. Kopi Gula Aren")
+    print("\n1.Kopi Gula Aren")
     print("2. Americano")
     print("3. Latte")
     pilihan = input("(Kopi Gula Aren / Americano / Latte): ")
@@ -115,5 +118,3 @@ while on:
             kurangin_resource(pilihan, pilihan_kopi["bahan"])
             uang += pilihan_kopi["harga"]
             input("\nTekan enter untuk melanjutkan...")
-
-            
