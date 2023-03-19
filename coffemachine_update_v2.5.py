@@ -45,11 +45,12 @@ class CoffeeShop:
         return False
 
     def input_uang(self):
-        try:
-            total_uang = int(input("\nMasukan uang: Rp."))
-            return total_uang
-        except ValueError:
-            print("Input uang tidak valid! Silakan coba lagi.")
+        while True:
+            try:
+                total_uang = int(input("\nMasukan uang: Rp."))
+                return total_uang
+            except ValueError:
+                print("Input uang tidak valid! Silakan coba lagi.")
 
     def transaksi_berhasil(self, masukan_uang, harga_minuman):
         if masukan_uang >= harga_minuman:
