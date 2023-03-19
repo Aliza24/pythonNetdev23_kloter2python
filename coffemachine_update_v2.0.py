@@ -50,7 +50,7 @@ def resource_full(masukan):
 
 def input_uang():
     try:
-        total_uang = int(input("Masukan uang: Rp."))
+        total_uang = int(input("\nMasukan uang: Rp."))
         return total_uang
     except ValueError:
         raise Exception("Input uang tidak valid!.")
@@ -95,10 +95,10 @@ while on:
     clear_screen()
     print("\nMau pesan kopi apa?")
     print("\nSilakan Pilih:")
-    print("\n1.Kopi Gula Aren")
+    print("1. Kopi Gula Aren")
     print("2. Americano")
     print("3. Latte")
-    pilihan = input("(Kopi Gula Aren / Americano / Latte): ")
+    pilihan = input("\n(Kopi Gula Aren / Americano / Latte / off / report): ")
     if pilihan == "off":
         on = False
     elif pilihan == "report":
