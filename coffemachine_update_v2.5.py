@@ -19,7 +19,7 @@ class CoffeeShop:
             },
             "Latte": { 
                 "bahan": {
-                    "kopi": 150,
+                    "kopi": 30,
                     "susu": 20,
                     "air": 80,
                 },
@@ -40,7 +40,7 @@ class CoffeeShop:
     def resource_full(self, masukan):
         for item in masukan:
             if masukan[item] >= self.resource[item]:
-                print(f"\nMaaf, bahan tidak cukup untuk membuat pesanan {item} Anda ")
+                print(f"\nMaaf, bahan {item} tidak cukup untuk membuat pesanan kopi Anda ")
                 return True
         return False
 
@@ -81,6 +81,15 @@ class CoffeeShop:
         print("============================================")
         input("\nTekan enter untuk melanjutkan...")
 
+    def print_report(self):
+        self.clear_screen()
+        print(f"Kopi\t\t: {self.resource['kopi']}ml")
+        print(f"Air\t\t: {self.resource['air']}ml")
+        print(f"Susu\t\t: {self.resource['susu']}ml")
+        print(f"Gula Merah\t: {self.resource['gula_merah']}ml")
+        print(f"Uang\t\t: {self.uang}")
+        input("\nTekan enter untuk melanjutkan...")
+
 
 def run(self):
     on = True    
@@ -113,14 +122,6 @@ def run(self):
                 self.uang += pilihan_kopi["harga"]
                 input("\nTekan enter untuk melanjutkan...")
 
-def print_report(self):
-    self.clear_screen()
-    print(f"Kopi\t\t: {self.resource['kopi']}ml")
-    print(f"Air\t\t: {self.resource['air']}ml")
-    print(f"Susu\t\t: {self.resource['susu']}ml")
-    print(f"Gula Merah\t: {self.resource['gula_merah']}ml")
-    print(f"Uang\t\t: {self.uang}")
-    input("\nTekan enter untuk melanjutkan...")
-
+    
 coffee_shop = CoffeeShop()
 run(coffee_shop)
