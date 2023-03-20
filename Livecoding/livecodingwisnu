@@ -1,0 +1,7 @@
+juml_matkul=(input("Berapa mata kuliah yang diambil?:"))
+matkul_1=(input("Masukkan nilai mata kuliah 1:"))
+matkul_2=(input("Masukkan nilai mata kuliah 2:"))
+matkul_3=(input("Masukkan nilai mata kuliah 3:"))
+mean=(matkul_1+matkul_2+matkul_3)/juml_matkul
+
+print(f"Rata-rata nilai Anda adalah {mean}")
